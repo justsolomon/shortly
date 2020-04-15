@@ -87,6 +87,10 @@
     cursor: pointer;
 }
 
+.hamburger:focus {
+    outline: 0;
+}
+
 .hamburger div {
     background-color: hsl(0, 0%, 75%);
     width: 2.1rem;
@@ -132,7 +136,7 @@
 }
 
 .mobile-navbar a:hover {
-    color: #fff;
+    color: #2acfcf;
 }
 
 .mobile-navbar .signup {

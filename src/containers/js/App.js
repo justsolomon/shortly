@@ -87,6 +87,7 @@ class App extends React.Component {
 
     let { inputUrl } = this.state;
     inputUrl = inputUrl.toLowerCase();
+
     const { shortenUrl, saveToStorage, addUrlCard, validateUrl, checkUrlProtocol, updateErrorId} = this;
     
     async function renderShortUrl(e) {
@@ -107,6 +108,8 @@ class App extends React.Component {
 
         //clear any previous error class
         updateErrorId(['', '', '']);
+        //clear current input
+        document.querySelector('.input-url').value = '';
       } 
       else if (inputUrl === '') {
         updateErrorId(['error', 'no-link', '']);
