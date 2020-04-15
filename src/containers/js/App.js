@@ -86,6 +86,7 @@ class App extends React.Component {
   render(){
 
     let { inputUrl } = this.state;
+    inputUrl = inputUrl.toLowerCase();
     const { shortenUrl, saveToStorage, addUrlCard, validateUrl, checkUrlProtocol, updateErrorId} = this;
     
     async function renderShortUrl(e) {
