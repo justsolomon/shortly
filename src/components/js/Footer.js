@@ -30,26 +30,26 @@ const Footer = () => {
                     <a href='#top'>Contact</a>
                 </div>
                 <div className='social-media'>
-                    <a href='https://web.facebook.com/gbolahan.balogun.5667'>
+                    <a target='_blank' rel='noopener noreferrer' href='https://web.facebook.com/gbolahan.balogun.5667'>
                         <img src={Facebook} alt='social media icon' />
                     </a>
 
-                    <a href='https://twitter.com/gbsolomon1'>
+                    <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/gbsolomon1'>
                         <img src={Twitter} alt='social media icon' />
                     </a>
 
-                    <a href='#top'>
+                    <a target='_blank' rel='noopener noreferrer' href='#top'>
                         <img src={Pinterest} alt='social media icon' />
                     </a>
                     
-                    <a href='https://instagram.com/gbsolomon1'>
+                    <a target='_blank' rel='noopener noreferrer' href='https://instagram.com/gbsolomon1'>
                         <img src={Instagram} alt='social media icon' />
                     </a>
                 </div>
             </div>
-            <div className="attribution">
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
-                Coded by <a href="https://github.com/solomon403">Solomon</a>.
+            <div className='attribution'>
+                Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank' rel='noopener noreferrer'>Frontend Mentor</a>. 
+                Coded by <a href='https://github.com/solomon403' target='_blank' rel='noopener noreferrer'>Solomon</a>.
             </div>
         </div>
     )
