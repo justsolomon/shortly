@@ -37,8 +37,13 @@
     .illustration {
         width: 100%;
     }
+    .illustration {
+        overflow: hidden;
+        width: 111%;
+        margin: -2rem 0 -.8rem 0;
+    }
     .illustration img {
-        width: 125%;
+        width: 145%;
     }
     .description {
         text-align: center;

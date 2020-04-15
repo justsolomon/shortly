@@ -4,19 +4,16 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 a {
   outline: 0;
 }
 
-button:focus {
+button {
   outline: 0;
 }
 
 body {
+  overflow-x: hidden;
   margin: 0 auto;
   font-size: 18px;
   font-weight: 500;

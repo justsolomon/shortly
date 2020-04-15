@@ -35,6 +35,7 @@
     border: 1px solid #fff;
     color: grey;
     font-weight: 400;
+    outline: 0;
 }
 
 .shortener-form .input-url::placeholder {
@@ -62,8 +63,11 @@
 
 #error,
 #error::placeholder {
-    border: 3px solid hsl(0, 54%, 58%);
     color: hsl(0, 54%, 58%);
+}
+
+#error {
+    border: 3px solid hsl(0, 54%, 58%);
 }
 
 #invalid-url,
