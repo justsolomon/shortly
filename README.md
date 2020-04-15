@@ -1,13 +1,18 @@
 # Shortly
 
-A website for shortening URLs created using React. Solution to the [URL shortening API landing page challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) on [Frontend Mentor](https://www.frontendmentor.io)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fdc64da0-94c7-4a69-994c-dc2e15c23c4d/deploy-status)](https://app.netlify.com/sites/shorten-url/deploys)
 
-You can view the site live [here](https://shorten-url.netlify.com)
+A website for shortening URLs created using React. Solution to the [URL shortening API landing page challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) on [Frontend Mentor.](https://www.frontendmentor.io)
+
+You can view the site live [here.](https://shorten-url.netlify.com)
 
 ## To run locally
 
+**NOTE**: You need the latest version of node and npm installed on your computer to run the app locally. 
+
 * Clone the repository
-* In the project directory, you can run:
+* Enter the project directory and run `npm install` to install the dependencies
+* After the installation, you can run:
 
 ### `npm start`
 
