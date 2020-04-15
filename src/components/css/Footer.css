@@ -1,0 +1,100 @@
+.footer {
+    background-color: #232127;;
+}
+
+.footer-inner {
+    width: 82%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer a {
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.footer .app-name {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: 40%;
+    margin-top: 3.5rem;
+}
+
+.footer-section {
+    margin-top: 3rem;
+    margin-right: 2rem;
+    width: 15%;
+}
+
+.footer-section p {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 1rem;
+    letter-spacing: -.04rem;
+}
+
+.footer-section a {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: hsl(0, 0%, 75%);
+}
+
+.footer-section a:hover {
+    color: #2acfcf;
+}
+
+.social-media {
+    width: 25%;
+    margin-top: 4rem;
+}
+
+.social-media a {
+    padding: 1rem;
+}
+
+.attribution {
+    text-align: center;
+    font-size: .8rem;
+    padding: .5rem;
+}
+
+.attribution a{
+    color: blue;
+}
+
+.attribution a:hover {
+    color: #2acfcf;
+}
+
+@media (max-width:850px) {
+    .footer-inner {
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer .app-name,
+    .footer-section,
+    .social-media {
+        width: 100%;
+    }
+    .footer-section {
+        margin-top: 2rem;
+    }
+    .social-media {
+        margin: 2rem 0 2rem 0;
+    }
+    .footer .app-name {
+        font-size: 2rem;
+    }
+    .footer-section p,
+    .footer-section a {
+        font-size: .9rem;
+    }
+}

@@ -1,0 +1,56 @@
+.intro {
+    display: flex;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.description {
+    width: 50%;
+    margin-top: 5rem;
+    margin-right: 6rem;
+}
+
+.description h1 {
+    font-size: 4.7rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 5rem;
+    color:#35323e;
+    letter-spacing: -.3rem;
+}
+
+.description p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.illustration {
+    width: 40%;
+}
+
+@media(max-width:850px) {
+    .intro {
+        flex-direction: column-reverse;
+    }
+    .description,
+    .illustration {
+        width: 100%;
+    }
+    .illustration img {
+        width: 125%;
+    }
+    .description {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .description h1 {
+        font-size: 2.6rem;
+        line-height: 3rem;
+        letter-spacing: -.2rem;
+    }
+    .description p {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+    }
+}

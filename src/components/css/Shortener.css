@@ -1,0 +1,130 @@
+.input-container {
+    background-color: #f0f1f6;
+    margin-bottom: 0;
+    margin-top: 10rem;
+    padding: 0;
+}
+
+.input-container-inner {
+    background-color: hsl(257, 27%, 26%);
+    background-repeat: no-repeat;
+    background-image: url(../../assets/bg-shorten-desktop.svg);
+    width: 82%;
+    margin: 0 auto;
+    height: 9rem;
+    border-radius: .7rem;
+    text-align: center;
+    display: flex;
+    position: relative;
+    top: -4.5rem;
+}
+
+.shortener-form {
+    padding: 0;
+    width: 100%;
+    margin: auto;
+}
+
+.shortener-form .input-url {
+    width: 70%;
+    margin-right: 2rem;
+    height: 3.8rem;
+    padding: 1.3rem;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    border: 1px solid #fff;
+    color: grey;
+    font-weight: 400;
+}
+
+.shortener-form .input-url::placeholder {
+    color: grey;
+}
+
+.shortener-form .submit-button {
+    height: 3.8rem;
+    border: 1px solid hsl(180, 66%, 49%);
+    border-radius: .9rem;
+    background-color: hsl(180, 66%, 49%);
+    padding: .8rem 1.8rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.shortener-form .submit-button:hover {
+    background-color: #95e7e7;
+    border: 1px solid #95e7e7;
+}
+
+#error,
+#error::placeholder {
+    border: 3px solid hsl(0, 54%, 58%);
+    color: hsl(0, 54%, 58%);
+}
+
+#invalid-url,
+#no-link {
+    display: inline-block;
+}
+
+.shortener-form span {
+    position: absolute;
+    font-size: 1rem;
+    left: 0;
+    margin: 4rem 0 0 4.7rem;
+    font-style: italic;
+    color: hsl(0, 87%, 67%);
+    display: none;
+}
+
+/* small screen PCs */
+@media (max-width:1150px) {
+    .shortener-form .input-url,
+    .shortener-form .submit-button {
+        height: 3.5rem;
+    }
+    .shortener-form span {
+       margin-left: 2.5rem;
+    }
+}
+
+/* mobile screens */
+@media (max-width:850px) {
+    .input-container-inner {
+        background-image: url(../../assets/bg-shorten-mobile.svg);
+        background-size: cover;
+        height: auto;
+    }
+    .shortener-form {
+        padding: 1.2rem 0;
+    }
+    .shortener-form span {
+        position: relative;
+        margin: -.5rem auto 1rem auto;
+        text-align: left;
+        width: 90%;
+        font-size: .95rem;
+    }
+    .shortener-form .input-url {
+        width: 90%;
+        margin: auto;
+        border-radius: .4rem;
+        margin-bottom: .9rem;
+        height: 1.8rem;
+        font-size: 1.1rem;
+        padding-left: .9rem;
+    }
+    .shortener-form .submit-button {
+        width: 90%;
+        border-radius: .4rem;
+        height: 3rem;
+    }
+    #invalid-url,
+    #no-link {
+        display: block;
+    }
+}

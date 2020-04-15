@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  outline: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(257, 7%, 63%);
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* to prevent scroll when navbar is open */
+.prevent-scroll {
+  height: 100vh;
+  overflow: hidden;
+}

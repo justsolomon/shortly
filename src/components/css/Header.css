@@ -1,0 +1,161 @@
+.header a {
+    text-decoration: none;
+    color: hsl(257, 7%, 63%);
+    padding: 1rem;
+    font-size: .9rem;
+    letter-spacing: -.02rem;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.header a:hover {
+    color: hsl(260, 8%, 14%);
+}
+
+.desktop-navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.desktop-navbar .general {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-navbar .general .app-name {
+    color: hsl(260, 8%, 14%);
+    padding-left: 0;
+    padding-top: 1.5rem;
+}
+
+.desktop-navbar .authentication {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-navbar .authentication .signup {
+    display: inline-block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-align: center;
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 1.5rem;
+    color: #fff;
+}
+
+.desktop-navbar .authentication .signup:hover {
+    background-color: #95e7e7;
+}
+
+/*================
+    mobile navbar
+    styles 
+=============== */
+
+/* hide mobile nav-bar on large screen */
+.hidden-menu {
+    display: none;
+}
+
+.hidden-menu-2 {
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* class to display nav-bar */
+.unhide {
+    display: block;
+}
+
+/* main styles */
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.top-menu .app-name {
+    padding: 0;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger div {
+    background-color: hsl(0, 0%, 75%);
+    width: 2.1rem;
+    height: .28rem;
+    margin-bottom: .4rem;
+    transition: all .4s;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-6px, 7px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-8.5px, -9px);
+}
+
+.page-links {
+    display: flex;
+    width: 82%;
+    margin: auto;
+    text-align: center;
+    flex-direction: column;
+    border-radius: .5rem;
+    padding: 1.2rem 0;
+    background-color: hsl(257, 27%, 26%);
+}
+
+.mobile-navbar span {
+    display: block;
+    background-color: grey;
+    height: .5px;
+    width: 90%;
+    margin: 1.5rem auto;
+}
+
+.mobile-navbar a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.mobile-navbar a:hover {
+    color: #fff;
+}
+
+.mobile-navbar .signup {
+    display: inline-block;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    text-align: center;
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mobile-navbar .signup:hover {
+    background-color: #95e7e7;
+    color: #fff;
+}
+
+@media(max-width:850px) {
+    .desktop-navbar {
+        display: none;
+    }
+    .hidden-menu {
+        display: block;
+    }
+}

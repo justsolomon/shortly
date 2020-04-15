@@ -1,0 +1,31 @@
+.auth-reminder {
+    background-image: url(../../assets/bg-boost-desktop.svg);
+    background-color: hsl(257, 27%, 26%);
+    text-align: center;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-reminder h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0 0 2rem 0;
+    letter-spacing: -.2rem;
+}
+
+@media (max-width:850px) {
+    .auth-reminder {
+        background-image: url(../../assets/bg-boost-mobile.svg);
+        background-size: cover;
+        height: 18rem;
+    }
+    .auth-reminder h2 {
+        font-size: 1.8rem;
+        letter-spacing: -.1rem;
+        margin-bottom: .7rem;
+    }
+}
