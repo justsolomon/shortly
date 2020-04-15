@@ -83,12 +83,18 @@ class App extends React.Component {
     });
   }
 
+  clearInput = () => {
+    //clear current input
+    document.querySelector('.input-url').value = '';
+    this.setState({ inputUrl: '' })
+  }
+
   render(){
 
     let { inputUrl } = this.state;
     inputUrl = inputUrl.toLowerCase();
 
-    const { shortenUrl, saveToStorage, addUrlCard, validateUrl, checkUrlProtocol, updateErrorId} = this;
+    const { shortenUrl, saveToStorage, addUrlCard, validateUrl, checkUrlProtocol, updateErrorId, clearInput} = this;
     
     async function renderShortUrl(e) {
       e.preventDefault();
@@ -108,8 +114,7 @@ class App extends React.Component {
 
         //clear any previous error class
         updateErrorId(['', '', '']);
-        //clear current input
-        document.querySelector('.input-url').value = '';
+        clearInput();
       } 
       else if (inputUrl === '') {
         updateErrorId(['error', 'no-link', '']);
