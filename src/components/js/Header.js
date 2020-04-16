@@ -3,11 +3,36 @@ import '../css/Header.css';
 import Logo from '../../assets/logo.svg';
 
 class Header extends React.Component {
+
+    constructor () {
+        super();
+        this.state = {
+            hamburger: false,
+            count: 0
+        }
+    }
+
     displayNavbar = () => {
-        document.querySelector('.hamburger').classList.toggle('change');
-        document.querySelector('.hidden-menu-2').classList.toggle('slidein');
-        document.querySelector('.hidden-menu-2').classList.toggle('unhide');
-        document.querySelector('html').classList.toggle('prevent-scroll');
+        if (!this.state.hamburger) {
+            if (this.state.count === 1) document.querySelector('.hidden-menu-2').classList.toggle('slideout');
+            document.querySelector('.hamburger').classList.toggle('change');
+            document.querySelector('.hidden-menu-2').classList.toggle('slidein');
+            document.querySelector('.hidden-menu-2').classList.toggle('unhide');
+            document.querySelector('html').classList.toggle('prevent-scroll');
+            this.setState({ hamburger: true })
+        } else {
+            document.querySelector('.hidden-menu-2').classList.toggle('slideout');
+            document.querySelector('.hamburger').classList.toggle('change');
+            document.querySelector('.hidden-menu-2').classList.toggle('slidein');
+            document.querySelector('html').classList.toggle('prevent-scroll');
+            setTimeout(function() {
+                document.querySelector('.hidden-menu-2').classList.toggle('unhide');
+            }, 810)
+            this.setState({
+                hamburger: false,
+                count: 1
+            })
+        }
     }
 
     render() {
