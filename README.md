@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fdc64da0-94c7-4a69-994c-dc2e15c23c4d/deploy-status)](https://app.netlify.com/sites/shorten-url/deploys)
 
-A website for shortening URLs created using React. Solution to the [URL shortening API landing page challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) on [Frontend Mentor.](https://www.frontendmentor.io)
+A website for shortening URLs created using React and the [rel.ink API](https://rel.ink). Solution to the [URL shortening API landing page challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) on [Frontend Mentor.](https://www.frontendmentor.io)
 
 You can view the site live [here.](https://shorten-url.netlify.com)
 
