@@ -12,14 +12,14 @@ class App extends React.Component {
     this.state = {
       inputUrl: '',
       urlCards: [],
-      errorIds: ['input-url', '', '']                                                                                                                                                                                      
+      errorIds: ['input-url']                                                                                                                                                                                      
     }
   }
 
   onInputChange = (e) => {
     this.setState({ 
       inputUrl: e.target.value, 
-      errorIds: ['input-url', '', '']
+      errorIds: ['input-url']
     })
   }
 
