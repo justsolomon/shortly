@@ -27,7 +27,7 @@ class Header extends React.Component {
             document.querySelector('html').classList.toggle('prevent-scroll');
             setTimeout(function() {
                 document.querySelector('.hidden-menu-2').classList.toggle('unhide');
-            }, 810)
+            }, 1050)
             this.setState({
                 hamburger: false,
                 count: 1
