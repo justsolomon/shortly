@@ -61,12 +61,12 @@
     border: 1px solid #95e7e7;
 }
 
-#error,
-#error::placeholder {
+.shortener-form .error,
+.shortener-form .error::placeholder {
     color: hsl(0, 54%, 58%);
 }
 
-#error {
+.shortener-form .error {
     border: 3px solid hsl(0, 54%, 58%);
 }
 

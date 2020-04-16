@@ -12,14 +12,14 @@ class App extends React.Component {
     this.state = {
       inputUrl: '',
       urlCards: [],
-      errorIds: []                                                                                                                                                                                      
+      errorIds: ['input-url', '', '']                                                                                                                                                                                      
     }
   }
 
   onInputChange = (e) => {
     this.setState({ 
       inputUrl: e.target.value, 
-      errorIds: []
+      errorIds: ['input-url', '', '']
     })
   }
 
@@ -113,14 +113,14 @@ class App extends React.Component {
         })
 
         //clear any previous error class
-        updateErrorId(['', '', '']);
+        updateErrorId(['input-url', '', '']);
         clearInput();
       } 
       else if (inputUrl === '') {
-        updateErrorId(['error', 'no-link', '']);
+        updateErrorId(['input-url error', 'no-link', '']);
       } 
       else {
-        updateErrorId(['error', '', 'invalid-url']);
+        updateErrorId(['input-url error', '', 'invalid-url']);
       }
     }
 
