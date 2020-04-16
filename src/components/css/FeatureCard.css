@@ -24,6 +24,8 @@
     position: relative;
     top: -4rem;
     margin: 0;
+    height: 88px;
+    width: 88px;
 }
 
 .card-icon img {
