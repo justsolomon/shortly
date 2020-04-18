@@ -79,7 +79,7 @@
     position: absolute;
     font-size: 1rem;
     left: 0;
-    margin: 4rem 0 0 5rem;
+    top: calc(100% + 20px);
     font-style: italic;
     color: hsl(0, 87%, 67%);
     display: none;
