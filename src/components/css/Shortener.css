@@ -61,6 +61,18 @@
     border: 1px solid #95e7e7;
 }
 
+.shortener-form .submit-button div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
 .shortener-form .error,
 .shortener-form .error::placeholder {
     color: hsl(0, 54%, 58%);

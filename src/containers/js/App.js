@@ -11,6 +11,7 @@ class App extends React.Component {
     super();                                                                                                                                                                                  
     this.state = {
       inputUrl: '',
+      loading: '',
       urlCards: [],
       errorIds: ['input-url']                                                                                                                                                                                      
     }
@@ -81,20 +82,27 @@ class App extends React.Component {
     this.setState({ inputUrl: '' })
   }
 
+  updateLoader = (loading) => {
+    this.setState({ loading })
+  }
+
   render(){
 
-    let { inputUrl } = this.state;
+    let { inputUrl, urlCards, errorIds, loading } = this.state;
     inputUrl = inputUrl.toLowerCase();
 
-    const { shortenUrl, saveToStorage, addUrlCard, validateUrl, checkUrlProtocol, updateErrorId, clearInput} = this;
+    const { shortenUrl, saveToStorage, addUrlCard, validateUrl, checkUrlProtocol, updateErrorId, clearInput, updateLoader} = this;
     
     async function renderShortUrl(e) {
       e.preventDefault();
 
       if (validateUrl(inputUrl)) {
+        updateLoader(true);
         if (!checkUrlProtocol(inputUrl)) inputUrl = `https://${inputUrl}`;
         
         const data = await shortenUrl(inputUrl);
+        updateLoader(false);
+
         const shortUrl = data.url.shortLink;
         
         saveToStorage(inputUrl, shortUrl);
@@ -119,7 +127,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <LandingPage />                                         
-        <Shortener getInput={this.onInputChange} renderUrl={renderShortUrl} urlCards={this.state.urlCards} errorIds={this.state.errorIds} />
+        <Shortener loading={loading} getInput={this.onInputChange} renderUrl={renderShortUrl} urlCards={urlCards} errorIds={errorIds} />
         <FeaturesPage />
         <AuthDiv />
         <Footer />

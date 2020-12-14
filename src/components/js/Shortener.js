@@ -1,8 +1,9 @@
 import React from 'react';
 import '../css/Shortener.css';
 import UrlCardList from './UrlCardList.js';
+import LoaderIcon from '../../assets/loader.png'
 
-const Shortener = ({ getInput, renderUrl, urlCards, errorIds }) => {
+const Shortener = ({ getInput, renderUrl, urlCards, errorIds, loading }) => {
     return (
         <div className='input-container'>
             <div className='input-container-inner'>
@@ -13,7 +14,14 @@ const Shortener = ({ getInput, renderUrl, urlCards, errorIds }) => {
                         <span className='invalid-url' id={errorIds[2]}>Please enter a valid link</span>
                     </label>
                     <label htmlFor='submit'>
-                        <button className='submit-button' onClick={renderUrl} id='submit'>Shorten it!</button>
+                        <button className='submit-button' onClick={renderUrl} id='submit'>
+                            <div>
+                            {
+                                loading && <img src={LoaderIcon} alt="loader icon" className='loader-icon' />
+                            }
+                             Shorten it!
+                             </div>
+                        </button>
                     </label>
                 </form>
             </div>
