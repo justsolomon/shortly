@@ -34,15 +34,7 @@ class App extends React.Component {
   }
 
   shortenUrl = (input) => {
-    return fetch('https://rel.ink/api/links/', {
-              method: 'POST',
-              body: JSON.stringify({
-                url: input
-              }),
-              headers: {
-                "Content-type": "application/json" 
-              }
-            })
+    return fetch(`https://cors-anywhere.herokuapp.com/https://cutt.ly/api/api.php?key=f5eb41a75a57b740cd89123e66b721340cbf7&short=${input}`)
               .then(res => res.json())
               .catch(err => console.log(err))
   }
@@ -103,7 +95,7 @@ class App extends React.Component {
         if (!checkUrlProtocol(inputUrl)) inputUrl = `https://${inputUrl}`;
         
         const data = await shortenUrl(inputUrl);
-        const shortUrl = `https://rel.ink/${data.hashid}`;
+        const shortUrl = data.url.shortLink;
         
         saveToStorage(inputUrl, shortUrl);
         
